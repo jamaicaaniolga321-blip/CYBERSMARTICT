@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSmart ICT | Cybersecurity Awareness</title>
+<style>
+:root{--navy:#10233f;--blue:#2364aa;--cyan:#dff5ff;--bg:#f4f8fc;--ink:#203047;--muted:#5f7085;--white:#fff;--green:#16845b;--red:#bd3b42}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{background:linear-gradient(120deg,var(--navy),var(--blue));color:white;padding:28px 18px}
+.wrap{max-width:1000px;margin:auto}
+.topline{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+h1{margin:6px 0;font-size:clamp(2rem,5vw,3.2rem);line-height:1.1}
+header p{max-width:680px;margin:12px 0 0;color:#eaf4ff}
+nav{background:#fff;border-bottom:1px solid #dbe5ef;position:sticky;top:0;z-index:5}
+.navinner{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;max-width:1000px;margin:auto}
+nav button{border:0;background:transparent;padding:10px 14px;border-radius:9px;color:var(--navy);font-weight:700;cursor:pointer;white-space:nowrap}
+nav button.active,nav button:hover{background:var(--cyan);color:var(--blue)}
+main{max-width:1000px;margin:24px auto;padding:0 16px 40px}
+section.panel{display:none}
+section.panel.active{display:block}
+.hero-card,.card{background:white;border:1px solid #e0e8f0;border-radius:16px;padding:22px;margin-bottom:18px;box-shadow:0 5px 18px rgba(20,50,80,.04)}
+.hero-card{background:linear-gradient(120deg,#e6f7ff,#fff);border-color:#cceafa}
+h2{color:var(--navy);margin-top:0}
+h3{color:var(--blue);margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.topic{border:1px solid #e0e8f0;border-radius:14px;padding:17px;background:#fff}
+.emoji{font-size:1.7rem}
+.pill{display:inline-block;background:#e6f6ee;color:#126b4b;border-radius:99px;padding:4px 10px;font-size:.8rem;font-weight:bold}
+button.primary{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:11px 16px;font-weight:bold;cursor:pointer}
+button.secondary{background:#edf3f9;color:var(--navy);border:1px solid #d5e1ec;border-radius:10px;padding:10px 14px;font-weight:bold;cursor:pointer}
+button:focus,input:focus{outline:3px solid #8bc9ff;outline-offset:2px}
+.note{border-left:4px solid var(--blue);padding:10px 14px;background:#eef7ff;border-radius:0 8px 8px 0}
+.warning{border-left:4px solid #d99120;padding:10px 14px;background:#fff8e8;border-radius:0 8px 8px 0}
+.question{padding:16px 0;border-bottom:1px solid #e4ebf2}
+.question:last-child{border-bottom:0}
+.question p{font-weight:bold;margin:0 0 8px}
+label.option{display:block;margin:7px 0;padding:9px 12px;background:#f7f9fc;border-radius:8px;cursor:pointer}
+input[type=radio]{margin-right:8px}
+#quizResult{margin-top:18px}
+footer{text-align:center;color:var(--muted);padding:24px 16px;font-size:.9rem}
+.small{font-size:.9rem;color:var(--muted)}
+ul{padding-left:22px}
+@media(max-width:550px){.hero-card,.card{padding:17px}nav button{padding:9px 11px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="topline">A student learning project · ICT</div>
+  <h1>CyberSmart ICT</h1>
+  <p>Learn how to recognize online threats, protect your accounts, and make safer choices on the internet.</p>
+ </div>
+</header>
+<nav aria-label="Main navigation"><div class="navinner">
+ <button class="active" data-panel="home">Home</button>
+ <button data-panel="learn">Learn</button>
+ <button data-panel="quiz">Knowledge Test</button>
+ <button data-panel="safety">Safety Checklist</button>
+ <button data-panel="about">About This Project</button>
+</div></nav>
+<main>
+<section id="home" class="panel active">
+ <div class="hero-card">
+  <span class="pill">Cybersecurity awareness</span>
+  <h2>Think before you click.</h2>
+  <p>Cybersecurity is the practice of protecting devices, accounts, networks, and information from digital threats. ICT students can use these skills in school, at home, and in future technology careers.</p>
+  <button class="primary" id="startLearningBtn" type="button">Start learning</button>
+ </div>
+ <div class="grid">
+  <div class="topic"><div class="emoji">🎣</div><h3>Spot phishing</h3><p>Learn to notice suspicious messages, fake login pages, and links that ask for private information.</p></div>
+  <div class="topic"><div class="emoji">🔐</div><h3>Protect accounts</h3><p>Use long, unique passwords and turn on multi-factor authentication when available.</p></div>
+  <div class="topic"><div class="emoji">🛡️</div><h3>Keep data private</h3><p>Share less personal information and review app permissions and privacy settings.</p></div>
+ </div>
+ <div class="card"><h2>How to use this website</h2><ol><li>Read the short lessons in <b>Learn</b>.</li><li>Take the knowledge test before studying if you are using it as a pre-test.</li><li>Review the lessons, then take the test again as a post-test.</li><li>Compare your scores and follow your teacher's research instructions.</li></ol><p class="small">For a school research study, record scores without collecting passwords or unnecessary personal information.</p></div>
+</section>
+<section id="learn" class="panel">
+ <div class="card"><h2>Cybersecurity lessons</h2><p>Read each lesson and remember the key action.</p>
+  <div class="grid">
+   <div class="topic"><div class="emoji">🎣</div><h3>1. Phishing</h3><p>Phishing is a trick that uses fake emails, messages, or websites to make people reveal information or click unsafe links.</p><b>Remember:</b> Check the sender and website address. If unsure, don't click; verify through an official channel.</div>
+   <div class="topic"><div class="emoji">🔑</div><h3>2. Strong passwords</h3><p>A strong password is long and difficult to guess. Avoid names, birthdays, and reusing the same password on many accounts.</p><b>Remember:</b> Use a unique password for every important account and a trusted password manager if available.</div>
+   <div class="topic"><div class="emoji">📲</div><h3>3. Multi-factor authentication</h3><p>Multi-factor authentication (MFA) adds another verification step beyond a password.</p><b>Remember:</b> Turn it on when available. Never share verification codes with someone who asks unexpectedly.</div>
+   <div class="topic"><div class="emoji">🧑‍💻</div><h3>4. Privacy and personal data</h3><p>Personal data includes details such as your address, phone number, school information, and account details.</p><b>Remember:</b> Share only what is necessary and check who can see your posts and profile.</div>
+   <div class="topic"><div class="emoji">🔗</div><h3>5. Safe browsing</h3><p>Scammers may use urgent messages, unexpected prizes, or unusual links to pressure people into acting quickly.</p><b>Remember:</b> Pause, check the source, and visit official websites by typing the address yourself.</div>
+   <div class="topic"><div class="emoji">🔄</div><h3>6. Updates and downloads</h3><p>Software updates can fix security weaknesses. Unknown downloads may contain harmful software.</p><b>Remember:</b> Update devices and apps, and download programs only from trusted sources.</div>
+  </div>
+ </div>
+ <div class="warning"><b>If something seems wrong:</b> Don't reply or forward a suspicious message. Tell a trusted adult, teacher, or school IT staff member, and use the service's official reporting tools.</div>
+</section>
+<section id="quiz" class="panel">
+ <div class="card">
+  <h2>Cybersecurity knowledge test</h2>
+  <p>Choose one answer for each question. You can use this same quiz before and after studying. For research, follow your teacher's directions about testing and scoring.</p>
+  <div class="note"><b>Suggested research use:</b> Record the pre-test score, let participants study the website, then record the post-test score. Use participant codes rather than names if your teacher approves.</div>
+  <form id="quizForm">
+   <div class="question"><p>1. What is phishing?</p>
+    <label class="option"><input type="radio" name="q1" value="a">A way to improve Wi-Fi speed</label>
+    <label class="option"><input type="radio" name="q1" value="b">A trick using fake messages or websites to steal information</label>
+    <label class="option"><input type="radio" name="q1" value="c">A type of computer screen</label></div>
+   <div class="question"><p>2. Which password habit is safest?</p>
+    <label class="option"><input type="radio" name="q2" value="a">Use your birthday for every account</label>
+    <label class="option"><input type="radio" name="q2" value="b">Share passwords with classmates</label>
+    <label class="option"><input type="radio" name="q2" value="c">Use long, unique passwords for different accounts</label></div>
+   <div class="question"><p>3. An unexpected message asks for your verification code. What should you do?</p>
+    <label class="option"><input type="radio" name="q3" value="a">Do not share it; verify the request through an official channel</label>
+    <label class="option"><input type="radio" name="q3" value="b">Send it quickly</label>
+    <label class="option"><input type="radio" name="q3" value="c">Post it in a group chat</label></div>
+   <div class="question"><p>4. What is a good way to protect personal information?</p>
+    <label class="option"><input type="radio" name="q4" value="a">Post your address publicly</label>
+    <label class="option"><input type="radio" name="q4" value="b">Share every detail with unknown accounts</label>
+    <label class="option"><input type="radio" name="q4" value="c">Limit what you share and check privacy settings</label></div>
+   <div class="question"><p>5. What should you do before opening a suspicious link?</p>
+    <label class="option"><input type="radio" name="q5" value="a">Click it to see what happens</label>
+    <label class="option"><input type="radio" name="q5" value="b">Check the source and verify it using an official channel</label>
+    <label class="option"><input type="radio" name="q5" value="c">Forward it to everyone</label></div>
+   <div class="question"><p>6. Why are software updates important?</p>
+    <label class="option"><input type="radio" name="q6" value="a">They can fix security weaknesses</label>
+    <label class="option"><input type="radio" name="q6" value="b">They make passwords public</label>
+    <label class="option"><input type="radio" name="q6" value="c">They remove the need for safe browsing</label></div>
+   <div class="question"><p>7. What does multi-factor authentication do?</p>
+    <label class="option"><input type="radio" name="q7" value="a">Makes every website public</label>
+    <label class="option"><input type="radio" name="q7" value="b">Adds another verification step to sign-in</label>
+    <label class="option"><input type="radio" name="q7" value="c">Replaces all software updates</label></div>
+   <div class="question"><p>8. Where should you download software?</p>
+    <label class="option"><input type="radio" name="q8" value="a">From random pop-up ads</label>
+    <label class="option"><input type="radio" name="q8" value="b">From links sent by strangers</label>
+    <label class="option"><input type="radio" name="q8" value="c">From trusted official sources</label></div>
+   <div class="question"><p>9. A website promises a prize but asks for your account password. What is the safest choice?</p>
+    <label class="option"><input type="radio" name="q9" value="a">Enter the password to claim it</label>
+    <label class="option"><input type="radio" name="q9" value="b">Leave the site and report or verify the offer</label>
+    <label class="option"><input type="radio" name="q9" value="c">Send your password to a friend first</label></div>
+   <div class="question"><p>10. What should you do if you think you clicked a harmful link?</p>
+    <label class="option"><input type="radio" name="q10" value="a">Hide it and do nothing</label>
+    <label class="option"><input type="radio" name="q10" value="b">Send the link to more people</label>
+    <label class="option"><input type="radio" name="q10" value="c">Tell a trusted adult or school IT staff and follow their advice</label></div>
+   <button class="primary" type="submit">Check my score</button>
+   <button class="secondary" id="resetQuizBtn" type="button">Reset test</button>
+  </form>
+  <div id="quizResult" aria-live="polite"></div>
+ </div>
+</section>
+<section id="safety" class="panel">
+ <div class="card"><h2>My online safety checklist</h2><p>Tick the habits you already follow. This checklist is for learning and self-reflection.</p>
+  <label class="option"><input type="checkbox"> I use unique passwords for important accounts.</label>
+  <label class="option"><input type="checkbox"> I never share passwords or unexpected verification codes.</label>
+  <label class="option"><input type="checkbox"> I check suspicious links and messages before acting.</label>
+  <label class="option"><input type="checkbox"> I keep my device and apps updated.</label>
+  <label class="option"><input type="checkbox"> I review privacy settings and limit personal information I share.</label>
+  <label class="option"><input type="checkbox"> I know how to report suspicious activity to a trusted adult or school IT staff.</label>
+  <p class="small">Your checklist selections are not saved or sent anywhere.</p>
+ </div>
+</section>
+<section id="about" class="panel">
+ <div class="card"><h2>About this project</h2>
+  <p><b>Project title:</b> Development and Effectiveness of a Cybersecurity Education and Awareness Website for ICT Students</p>
+  <p><b>Target users:</b> ICT students</p>
+  <p><b>Purpose:</b> To provide basic cybersecurity lessons and assess whether using the website is associated with improved cybersecurity knowledge.</p>
+  <p><b>Suggested evaluation:</b> A pre-test and post-test, plus a short usability feedback form.</p>
+  <h3>Research reminder</h3>
+  <p>Ask your teacher for approval before testing participants. Explain the study, get any required consent, keep results private, and do not collect passwords or other unnecessary sensitive information. Report actual results honestly; do not claim the website is effective until the data has been analyzed.</p>
+  <p class="small">This is an educational student project, not a complete cybersecurity protection tool or professional security audit.</p>
+ </div>
+</section>
+</main>
+<footer>CyberSmart ICT · Learn safely. Think critically. Protect your information.</footer>
+<script>
+const navButtons = document.querySelectorAll('nav button[data-panel]');
+function showPanel(id){
+ document.querySelectorAll('section.panel').forEach(s=>s.classList.toggle('active',s.id===id));
+ navButtons.forEach(b=>b.classList.toggle('active',b.dataset.panel===id));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+navButtons.forEach(b=>b.addEventListener('click',()=>showPanel(b.dataset.panel)));
+document.getElementById('startLearningBtn').addEventListener('click',()=>showPanel('learn'));
+document.getElementById('resetQuizBtn').addEventListener('click',resetQuiz);
+const answers={q1:'b',q2:'c',q3:'a',q4:'c',q5:'b',q6:'a',q7:'b',q8:'c',q9:'b',q10:'c'};
+document.getElementById('quizForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ let score=0, unanswered=0;
+ for(const [q,a] of Object.entries(answers)){
+  const selected=this.querySelector(`input[name="${q}"]:checked`);
+  if(!selected) unanswered++;
+  else if(selected.value===a) score++;
+ }
+ const result=document.getElementById('quizResult');
+ if(unanswered){
+  result.innerHTML=`<div class="warning">Please answer all ${Object.keys(answers).length} questions before checking your score. You still have ${unanswered} unanswered.</div>`;
+  return;
+ }
+ const percent=Math.round(score/Object.keys(answers).length*100);
+ result.innerHTML=`<div class="hero-card"><h3>Your score: ${score}/10 (${percent}%)</h3><p>${score>=8?'Great work! Keep practicing safe online habits.':score>=5?'Good start. Review the lessons and try again.':'Review the lessons and take the test again to practice.'}</p><p class="small">This result is displayed only on this page. It is not uploaded or saved.</p></div>`;
+});
+function resetQuiz(){
+ document.getElementById('quizForm').reset();
+ document.getElementById('quizResult').innerHTML='';
+}
+</script>
+</body>
+</html>
